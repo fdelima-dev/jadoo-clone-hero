@@ -1,0 +1,91 @@
+@use 'variables';
+
+header {
+    position: relative;
+    width: 100%;
+    @media (max-width: 768px){
+        position: unset;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        @media (max-width: 768px){
+            display: block;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        &__brand {
+            img {
+                width: 120px;
+                height: 32px;
+
+                @media (max-width: 768px){
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+
+        &__menu {
+            &__list {
+                list-style: none;
+
+                &__item {
+                    float: left;
+                    margin: 0 20px;
+
+                    @media (max-width: 768px){
+                        float: none;
+                        text-align: center;
+                        margin: 0;
+                    }
+
+                    a {
+                        color: #333;
+                        text-decoration: none;
+                        padding: 14px 16px;
+                        display: block;
+
+                        border: 2px solid transparent;
+                        transition: all .5s ease;
+
+                        &:hover,
+                        &.active {
+                            border: 2px solid #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+header::before {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 700px;
+    height: 700px;
+
+    background-image: url('../../build/images/Decore.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+
+    z-index: -1;
+
+    @media (max-width: 768px){
+        display: none;
+    }
+}

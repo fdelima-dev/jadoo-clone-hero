@@ -1,0 +1,21 @@
+@use 'variables';
+@use 'header';
+@use 'hero';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: variables.$fontePrincipal;
+    src: url('../../assets/fonts/ProductSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: variables.$fonteSecundaria;
+    src: url('../../assets/fonts/Volkhov-Regular.ttf') format('truetype');
+}
+body{
+    font-family: variables.$fontePrincipal;
+    background-color: variables.$corFundo;
+}
