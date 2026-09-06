@@ -3,29 +3,28 @@
 .hero{
     max-width: 1440px;
     width: 100%;
-    height: 750px;
+    height: 1440px;
     margin: 34px 0;
 
     @media (max-width: 768px){
         margin: 0;
     }
-    &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
+    &__container{
+        display: flex;
         align-items: center;
-        justify-content: center;
-    }
+        justify-content: space-between;
+
+        @media (max-width:768px){
+            flex-direction: column;
+            align-items: center;
+        }
         &__hello{
-            width: 650px;
-            height: 600px;
+            width: 1440px;
             margin: 0 auto;
             float: left;
+            display: block;
             padding-top: 150px;
-            padding-left: 250px;
+            padding-left: 450px;
             margin: 24px 0;
             @media (max-width: 768px){
                 width: 100%;
@@ -62,26 +61,32 @@
                 color: variables.$corHero;
                 font-family: variables.$fonteSecundaria;
                 font-size: 64px;
+                width: 400px;
+
+                @media (max-width: 768px){
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 45px;
+                    width: 200px;
+                }
 
             }
             span.legend{
                 color: variables.$corLegend;
             }
         }
-        &__img {
-        width: 630px;
+        &__img{
+           img{
+            width: 720px;
+            margin-left: 450px;
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            width: 350px;
-            float: none;
-            margin: 0;
+            @media (max-width: 768px){
+                width: 350px;
+                margin: 0 auto;
+            }
+           } 
         }
     }
-    }
+    
 }
